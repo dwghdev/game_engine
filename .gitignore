@@ -1,5 +1,12 @@
-# Visual C++ cache files
+# Directories
+.vs/
+bin/
+bin_int/
 
+# Files
+*.user
+
+# Cache Files
 *.aps
 *.ncb
 *.opendb
