@@ -13,8 +13,12 @@ project "GameEngine"
   location "GameEngine"
   kind "SharedLib"
   language "C++"
+
   targetdir("bin/" .. outputdir .. "/%{prj.name}")
   objdir("bin_int/" .. outputdir .. "/%{prj.name}")
+
+  pchheader "gepch.h"
+  pchsource "GameEngine/src/gepch.cpp"
 
   files {
     "%{prj.name}/src/**.h",
@@ -22,6 +26,7 @@ project "GameEngine"
   }
 
   includedirs {
+    "%{prj.name}/src/",
     "%{prj.name}/vendor/spdlog/include"
   }
 
