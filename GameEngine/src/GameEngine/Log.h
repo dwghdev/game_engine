@@ -1,8 +1,10 @@
 #pragma once
 
 #include <memory>
+
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace GameEngine {
   class GAME_ENGINE_API Log {
@@ -25,7 +27,7 @@ namespace GameEngine {
 #define GE_CORE_FATAL(...)  ::GameEngine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
 // Client Log Macros
-#define GE_TRACE(...)  ::GameEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define GE_TRACE(...)	 ::GameEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define GE_INFO(...)   ::GameEngine::Log::GetClientLogger()->info(__VA_ARGS__)
 #define GE_WARN(...)   ::GameEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define GE_ERROR(...)  ::GameEngine::Log::GetClientLogger()->error(__VA_ARGS__)

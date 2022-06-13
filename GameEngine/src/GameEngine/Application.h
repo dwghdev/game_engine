@@ -1,7 +1,6 @@
 #pragma once
 
 namespace GameEngine {
-
   class __declspec(dllexport) Application {
   public:
     Application();
