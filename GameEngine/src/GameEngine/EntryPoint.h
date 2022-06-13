@@ -5,7 +5,10 @@
 extern GameEngine::Application* GameEngine::CreateApplication();
 
 int main(int argc, char** argv) {
-  // printf("Entry Point\n");
+  GameEngine::Log::Init();
+  GE_CORE_WARN("Initialized Log!");
+  GE_INFO("Hello Gon");
+
   auto app = GameEngine::CreateApplication();
   app->Run();
   delete app;
